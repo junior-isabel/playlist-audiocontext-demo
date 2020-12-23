@@ -1,0 +1,95 @@
+.container-inline {
+  display: flex;
+  position: relative;
+}
+#analyser {
+  flex: 1;
+  position: relative;
+}
+#analyser::after {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #444;
+}
+.music-description {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(7, 207, 107);
+  color: #fafafa;
+  padding: 10px 20px;
+  position: relative;
+}
+.music-title, .music-content {
+  display: block;
+}
+.music-title {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
+.music-content {
+}
+#play-or-pause {
+  margin-top: 20px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 95%;
+  line-height: 1.2em;
+  cursor: pointer;
+  outline-style: none;
+  border-style: none;
+  text-transform: uppercase;
+  color: #fafafa;
+  background-color: transparent;
+  box-shadow: 0 0 4px #444;
+  display: inline-block;
+}
+#play-or-pause[data-playing="true"] {
+  box-shadow: inset 0 0 9px 1px #444;
+}
+label[for='file-audio'] {
+  box-shadow: 0 0 3px 1px #444;
+  background-color: rgb(1, 209, 112);
+  color: #fafafa;
+  font-size: 2em;
+  cursor: pointer;
+}
+label[for="file-audio"]:active {
+  opacity: 0.7;
+}
+label[for='file-audio'] input{
+  display: none;
+}
+.list-music {
+  list-style: none;
+  padding-left: 0;
+  background: rgb(43, 42, 42);
+}
+.item-music {
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  color: #fafafa;
+  line-height: 1.5em;
+}
+.item-music:hover {
+  background-color: cadetblue;
+}
+.item-music.playing {
+  background-color: rgb(97, 223, 114);
+}
+
+.controllers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
